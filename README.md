@@ -1,2 +1,3 @@
 # BHTSProject
-Group project for BHTS - Capital One
+
+BHTS Project - Capital One
