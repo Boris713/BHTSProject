@@ -53,11 +53,11 @@ header .logo span {
 
 .header-text {
     margin-left: 10px;
-    font-family: 'Segoe UI';
+    font-family: 'Tahoma';
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 500;
     color: #ffffff;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
 }
 
 header h1 {
