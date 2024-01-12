@@ -10,12 +10,31 @@ li {
     box-sizing: border-box;
 }
 
+button {
+    font-family: 'Karla';
+    letter-spacing: 0.1em;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Karla', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
+}
+
+/* Skip Nav Style */
+.skip-nav-link {
+    position: absolute;
+    transform: translateY(-250%);
+    color: #E7ECEF;
+    text-decoration: none;
+    background-color: #8B8C89;
+    opacity: 0.9;
+}
+
+.skip-nav-link:focus {
+    transform: translateY(-130%);
 }
 
 /* Header */
@@ -51,13 +70,21 @@ header .logo span {
     font-weight: lighter;
 }
 
-.header-text {
+#header-text {
+    display: flex;
     margin-left: 10px;
-    font-family: 'Tahoma';
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #ffffff;
-    letter-spacing: 0.1em;
+    flex-direction: column;
+    align-items: start;
+}
+
+.header-site-name, .header-site-subtitle {
+    font-size: 2rem;
+    color: #274C77;
+    letter-spacing: 0.2em;
+}
+
+.header-site-subtitle {
+    font-size: 0.8rem;
 }
 
 header h1 {
@@ -98,8 +125,8 @@ nav ul li a:hover {
 
 /* Sign-In */
 .sign-in-button {
-    background-color: #3498db;
-    color: white;
+    background-color: #E7ECEF;
+    color: #274C77;
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -109,6 +136,7 @@ nav ul li a:hover {
 
 .sign-in-button:hover {
     background-color: #2980b9;
+    color: #E7ECEF;
 }
 
 .header-icon {
@@ -149,7 +177,7 @@ nav ul li a:hover {
 }
 
 /* Main */
-main {
+#main-content {
     background-color: #fff;
     margin: 20px auto;
     padding: 20px;
