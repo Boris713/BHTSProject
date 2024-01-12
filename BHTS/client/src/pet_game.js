@@ -10,7 +10,6 @@ const boredomStatEl = document.querySelector("#boredom-stat");
 const hungerStatEl = document.querySelector("#hunger-stat");
 const sleepyStatEl = document.querySelector("#sleepiness-stat");
 
-const gameMessageEl = document.querySelector("#tama-message");
 const hungerMessage = document.querySelector("#hunger-message");
 const boredMessage = document.querySelector("#bored-message");
 const sleepyMessage = document.querySelector("#sleepy-message");
@@ -51,13 +50,15 @@ const buttons = document.querySelectorAll('.img_btn');
 buttons.forEach(button => {
     button.addEventListener('click', updateScore_minus);    
   });
-  if (score + 3>= 3){
-  buttons.forEach(button => {
-    button.addEventListener('click', closeMessage);        
-  })
-}
+const food = document.getElementById("hungry");
+food.addEventListener('click', closeHungerMessage); 
+const play = document.getElementById("bored");
+play.addEventListener('click', closeBoredMessage);
+const sleep = document.getElementById("sleepy");
+sleep.addEventListener('click', closeSleepMessage); 
 
-/* Opens info block when question mark icon is pressed*/
+
+/* Opens info block when question mark icon is clicked*/
   function showAlert() {
     var alertBanner = document.getElementById("myAlert");
     alertBanner.innerHTML = "How to get points?🤔 Its simple!<br>1. Make payments to your credit card. It is crucial to be on time with your payments to prevent your credit score from deceasing. <br> 2. Maintain a credit balance below 30% at the end of every month. Lowering your credit utilization ratio helps improve your credit score. <br>3. Read some of our articles, watch some of our lessons and play our trivia game! There is always new things to learn about yoru credit. Therefore, staying informed is vital for your credit score growth.";
@@ -67,7 +68,6 @@ buttons.forEach(button => {
       alertBanner.style.display = "none";
     }, 10000); 
 }
-
 
   setTimeout(function() {
     var payButton = document.getElementById("myPay");
@@ -116,7 +116,6 @@ function render() {
     // Icebox - add conditional animations function call
   }
 function renderStats() {
-
     boredomStatEl.textContent = state.boredom;
     hungerStatEl.textContent = state.hunger;
     sleepyStatEl.textContent = state.sleepiness;
@@ -125,23 +124,35 @@ function renderStats() {
 function runGame() {
     if (continueGame()) {
       updateStats();
-      if (state.hunger %3  == 0) {
+      if (state.hunger % 5  == 0) {
         showHungerMessage();
       }
       else if (state.boredom % 4 == 0) {
         showBoredMessage();
       }
-      else if (state.sleepiness % 5 == 0) {
+      else if (state.sleepiness % 3 == 0) {
         showSleepyMessage();
       }
     }
   
     render();
   }
-  function closeMessage(){
+
+/* Show/hide message based on pets needs */
+  function closeHungerMessage(){
+    if (score + 3 >= 3) {
     hungerMessage.classList.add("hidden");
+    }
+  }
+  function closeSleepMessage(){
+    if (score + 3 >= 3) {
     sleepyMessage.classList.add("hidden");
+    }
+  }
+  function closeBoredMessage(){
+    if (score + 3 >= 3) {
     boredMessage.classList.add("hidden");
+    }
   }
   function showHungerMessage() {
     hungerMessage.classList.remove("hidden");
