@@ -1,11 +1,12 @@
 from flask import Flask
 
+
 app = Flask(__name__)
 
 
-@app.route("/members")
-def members():
-    return {"members": ["Member1", "Member2", "Member3", "Member4"]}
+@app.route("/")
+def index():
+    return "Trivia Game Backend"
 
 
 if __name__ == "__main__":
