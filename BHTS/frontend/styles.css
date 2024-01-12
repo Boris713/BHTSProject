@@ -164,3 +164,30 @@ footer {
 footer p {
     font-size: 1em;
 }
+
+/* Articles */
+.article-image {
+    width: 300px;
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 2px #eee;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.article-image:hover {
+    transform: scale(1.1);
+}
+
+.article-item {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.article-title {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #333;
+}
