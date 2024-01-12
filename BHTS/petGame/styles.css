@@ -335,7 +335,7 @@ footer p {
     position: relative;
     margin: 2rem 10rem;
     border-radius: 25px;
-    background-image: url('farm_house.jpeg');
+    background-image: url('../frontend/assets/farm_house.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
