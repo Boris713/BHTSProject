@@ -31,15 +31,81 @@
     <main>
         <h2>Structured Lessons</h2>
         <p>Explore our comprehensive lessons to build a solid foundation in understanding and managing your credit.</p>
-        <ul>
-            <li><a href="lesson1.html">Lesson 1: Basics of Credit Scoring</a></li>
-            <li><a href="lesson2.html">Lesson 2: Improving Your Credit Score</a></li>
-            <li><a href="lesson3.html">Lesson 3: Managing Your Debt</a></li>
-        </ul>
+        <!-- Filter Buttons -->
+        <div class="article-filters">
+            <button class="filter-button" data-filter="all">All</button>
+            <button class="filter-button" data-filter="project">Guided Projects</button>
+            <button class="filter-button" data-filter="course">Online Courses</button>
+            <button class="filter-button" data-filter="specialization">Specializations</button>
+        </div>
+
+        <!-- Article Container -->
+        <div class="articles">
+            <div class="article-item" data-category="course">
+                <a href="https://corporatefinanceinstitute.com/course/fundamentals-of-credit/">
+                    <iframe src="https://www.youtube.com/embed/hdINYt5DYDw" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <span class="article-title">Fundamentals of Credit - Corporate Finance Institute</span>
+                </a>
+            </div>
+            <div class="article-item" data-category="course">
+                <a href="https://www.mcgillpersonalfinance.com/">
+                    <iframe src="https://www.youtube.com/embed/4qFoQHcxUEo" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <span class="article-title">"Personal Finance Essentials" - McGill</span>
+                </a>
+            </div>
+            <div class="article-item" data-category="course">
+                <a
+                    href="https://www.edx.org/learn/financial-literacy/the-university-of-michigan-finance-for-everyone-smart-tools-for-decision-making">
+                    <iframe src="https://www.youtube.com/embed/nNaP4mHlMc8" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <span class="article-title">"Finance for Everyone" - University of Michigan</span>
+                </a>
+            </div>
+            <div class="article-item" data-category="course">
+                <a href="https://www.coursera.org/learn/financial-markets-global">
+                    <iframe src="https://www.youtube.com/embed/WQui_3Hpmmc" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <span class="article-title">Financial Markets - Yale University</span>
+                </a>
+            </div>
+            <div class="article-item" data-category="project">
+                <a href="https://www.coursera.org/projects/investment-risk-management">
+                    <img src="assets/project1.png" alt="Investment Risk Management" class="article-image">
+                    <span class="article-title">Investment Risk Management - Coursera</span>
+                </a>
+            </div>
+            <div class="article-item" data-category="project">
+                <a href="https://www.coursera.org/projects/creating-budget-microsoft-excel">
+                    <img src="assets/project2.png" alt="Budget" class="article-image">
+                    <span class="article-title">Creating a Budget with Microsoft Excel - Coursera</span>
+                </a>
+            </div>
+            <div class="article-item" data-category="specialization">
+                <a href="https://www.coursera.org/specializations/financialtechnology">
+                    <img src="assets/specialization1.png" alt="Innovation" class="article-image">
+                    <span class="article-title">FinTech Innovations Specialization
+                        - University of Michigan</span>
+                </a>
+            </div>
+            <div class="article-item" data-category="specialization">
+                <a href="https://www.coursera.org/specializations/risk-management">
+                    <img src="assets/specialization2.png" alt="Risk Management" class="article-image">
+                    <span class="article-title">Risk Management Specialization - New York Institute of Finance</span>
+                </a>
+            </div>
+        </div>
     </main>
     <footer>
         <p>© CreditEdu - Empowering Financial Success</p>
     </footer>
+
+    <script src="filter-articles.js"></script>
 </body>
 
 </html>

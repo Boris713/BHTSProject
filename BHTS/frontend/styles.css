@@ -191,3 +191,11 @@ footer p {
     font-size: 0.8rem;
     color: #333;
 }
+
+/* Videos */
+.article-item iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    margin-bottom: 10px;
+}
