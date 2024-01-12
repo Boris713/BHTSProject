@@ -8,7 +8,18 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/templatemo-topic-listing.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/custom.js"></script>
 </head>
 
 <body>
@@ -46,23 +57,132 @@
                 </div>
                 <img src="assets/globe.png" alt="Globe" class="header-icon" id="translateButton">
             </button>
+
         </div>
     </header>
 
     <main id="main-content">
-        <section id="section1">
-            <div id="main-text">
-                <div id="main-sec1-div1">Credit Scores Are Important Now Than Ever Before</div>
-                <div id="main-sec1-div2">Your Credit Journey Starts Here</div>
-                <a id="start-now-button" href="articles.html"><button id="main-sec1-div3">start now</button></a>
+        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h1 class="text-white text-center">Credit Scores</h1>
+
+                        <h6 class="text-center">are more important NOW than ever before.</h6>
+
+                        <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text bi-search" id="basic-addon1">
+
+                                </span>
+
+                                <input name="keyword" type="search" class="form-control" id="keyword"
+                                    placeholder="your credit journey start HERE." aria-label="Search">
+
+                                <button type="submit" class="form-control">Search</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
             </div>
-            <img id="homepage-image" src="assets/easter_egg.jpg" alt="A woman and a dog sitting down">
         </section>
 
-        <h2>Welcome to CreditEdu</h2>
-        <p>Your journey to understanding and improving your credit score starts here. Explore our resources, play
-            educational games, and track your learning progress.</p>
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block bg-white shadow-lg">
+                            <a href="importance.html">
+                                <div class="d-flex">
+                                    <div>
+                                        <h5 class="mb-2">Credit</h5>
+
+                                        <p class="mb-0">the ability to borrow money or access goods or services with the
+                                            understanding that you'll pay later.</p>
+                                    </div>
+
+                                    <span class="badge bg-design rounded-pill ms-auto">14</span>
+                                </div>
+
+                                <img src="assets/credit.png" class="custom-block-image img-fluid" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="custom-block custom-block-overlay">
+                            <div class="d-flex flex-column h-100">
+                                <img src="assets/easter_egg.jpg" class="custom-block-image img-fluid" alt="">
+
+                                <div class="custom-block-overlay-text d-flex">
+                                    <div>
+                                        <h5 class="text-white mb-2">Finance</h5>
+
+                                        <p class="text-white">a term broadly describing the study and system of money,
+                                            investments, and other financial instruments; can be divided broadly into
+                                            three distinct categories: corporate finance, personal
+                                            finance, and public finance. Recently, other subcategories of finance
+                                            include behavioral finance and social
+                                            finance.
+                                        </p>
+
+                                        <a href="articles.html" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
+                                    </div>
+
+                                    <span class="badge bg-finance rounded-pill ms-auto">25</span>
+                                </div>
+                                <div class="section-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact-section section-padding section-bg" id="section_5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 text-center">
+                        <h2 class="mb-5">Say What's Up!</h2>
+                    </div>
+
+                    <div class="col-lg-5 col-12 mb-4 mb-lg-0">
+                        <iframe class="google-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.912642243967!2d-77.21471828836404!3d38.925974144899406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64b11bc66cd63%3A0x43ac80d5df5f7b8a!2sCapital%20One%20-%20Headquarters!5e0!3m2!1sen!2sus!4v1705041558454!5m2!1sen!2sus"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
+                        <h4 class="mb-3">Headquarters</h4>
+
+                        <p>1680 Capital One Drive
+                            <br>
+                            McLean, Virginia - 22102
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mx-auto">
+                        <h4 class="mb-3">Richmond Office</h4>
+
+                        <p>15075 Capital One Drive
+                            <br>
+                            Richmond, Virginia - 23238
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
         <p>Start Your Journey</p>
     </footer>
