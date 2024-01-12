@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CreditEdu - Your Path to Credit Knowledge</title>
-    <link rel="stylesheet" href="../petGame/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
-    <script src="../client/src/pet_game.js" defer></script>
+    <script src="pet_game.js" defer></script>
 
 </head>
 
@@ -68,11 +68,9 @@
         <h2 id="scoreDisplay">Points: 0</h2>
 
         <button onclick="showAlert()" id="question_btn">
-        <img  class = "question_btn" src="assets/question.png" alt="buttonpng"/>
+        <img  class = "question_btn" src="question.png" alt="buttonpng"/>
         </button>
           <div id="myAlert" class="alert-banner"></div>
-        </div>
-        <div class = "game_bck">
         </div>
         <div id="scoreAlert" class="alert">
             <span onclick="closeScoreAlert()"></span>
@@ -81,13 +79,13 @@
     
         <section id="controller" class="button-wrapper">
         <button>
-            <img class = "img_btn" src="assets/beach-ball.png" alt="buttonpng"/>
+            <img id = "bored" class = "img_btn" src="beach-ball.png" alt="buttonpng"/>
           </button>
         <button >
-            <img class ="img_btn" src="assets/coin.png" alt="buttonpng" />
+            <img id = "hungry" class ="img_btn" src="coin.png" alt="buttonpng" />
         </button >
         <button>
-            <img class = "img_btn" src="assets/crescent-moon.png" alt="buttonpng"/>
+            <img id = "sleepy" class = "img_btn" src="crescent-moon.png" alt="buttonpng"/>
           </button>
     </section>
 
@@ -101,7 +99,7 @@
           <h2 id="sleepy-message" class="hidden">
             <span id="message-content">I'm sleepy!</span>
           </h2>
-        <img id="piggy" src="assets/piggy_bank.webp" class="game-graphic" />
+        <img id="piggy" src="piggy_bank.webp" class="game-graphic" />
         <button id="restart" class="hidden">Play Again</button>
       </section>
     </main>
