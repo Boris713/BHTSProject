@@ -77,7 +77,8 @@ header .logo span {
     align-items: start;
 }
 
-.header-site-name, .header-site-subtitle {
+.header-site-name,
+.header-site-subtitle {
     font-size: 2rem;
     color: #274C77;
     letter-spacing: 0.2em;
@@ -151,7 +152,7 @@ nav ul li a:hover {
     border-radius: 100%;
 }
 
-.translate-button:hover #tooltip{
+.translate-button:hover #tooltip {
     opacity: 1;
 }
 
@@ -162,6 +163,7 @@ nav ul li a:hover {
     gap: 0.5rem;
     background-color: rgba(138, 138, 138, 0.7);
     color: white;
+    margin-top: 15px;
     padding-left: 0.2rem;
     padding-right: 0.2rem;
     padding-top: 0.2rem;
@@ -172,8 +174,9 @@ nav ul li a:hover {
     right: 0.8rem;
     opacity: 0;
     transition: opacity 0.15s;
-    pointer-events: none; /* hovers only when user hovers on button, not tool tip */
-    white-space: nowrap ;
+    pointer-events: none;
+    /* hovers only when user hovers on button, not tool tip */
+    white-space: nowrap;
 }
 
 /* Main */
