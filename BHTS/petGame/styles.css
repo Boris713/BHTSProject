@@ -292,7 +292,6 @@ footer p {
     color: #89b6e4;
   }
 
-
 /* Payment Notification */
 .alert {
     position: absolute;
@@ -304,6 +303,7 @@ footer p {
     margin-left: 1%;
     border-radius: 10px;
   }
+
 .alert-banner {
     display: none;
     margin-right: 20px;
@@ -335,16 +335,15 @@ footer p {
     position: relative;
     margin: 2rem 10rem;
     border-radius: 25px;
-    background-image: url('../frontend/assets/farm_house.jpeg');
+    background-image: url('farm_house.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(7px);
-    min-height: 100vh;
+    height: 100vh;
     border-style: solid;
     border: 10px blue;
   }
-
 
 /* Game Buttons*/ 
 .score_board{
@@ -403,7 +402,7 @@ button {
 
   /* Pet */
   #piggy {
-    max-height: 33vmin;
+    max-height: 27vmin;
   }
   .hidden {
     visibility: hidden
