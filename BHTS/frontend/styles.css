@@ -191,3 +191,7 @@ footer p {
     font-size: 0.8rem;
     color: #333;
 }
+
+#google_translate_element {
+    display: none;
+}
