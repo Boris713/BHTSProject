@@ -17,16 +17,16 @@ html {
 
 .score-section {
   text-align: center;
-  font-size: 24px;
-  margin: 20px;
+  padding: 20px;
 }
 
 .quiz-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .question-section {
@@ -34,7 +34,9 @@ html {
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  width: 100%;
+  width: 600px; /* Fixed width */
+  max-width: 100%; /* Ensures it's not wider than its container */
+  margin: auto;
 }
 
 .question-count {
@@ -59,11 +61,30 @@ html {
   margin-bottom: 10px;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .option:hover {
   background-color: #d3d3d3;
+  transform: scale(1.05);
+}
+
+.next-question-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px auto;
+  display: block;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.next-question-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 .option.correct {
@@ -76,23 +97,253 @@ html {
   color: white;
 }
 
-.next-question-btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.next-question-btn:hover {
-  background-color: #0056b3;
-}
-
 @media (max-width: 768px) {
   .quiz-container {
     width: 90%;
   }
+}
+
+.main-screen {
+  text-align: center;
+  padding: 20px;
+}
+
+.main-screen h1 {
+  font-size: 5em;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+.main-screen .start-button,
+.main-screen .high-scores-button {
+  padding: 15px 30px;
+  font-size: 1.5em;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.main-screen button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.main-heading {
+  font-size: 5em;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+.start-button,
+.high-scores-button {
+  padding: 15px 30px; /* Increase padding for a larger button */
+  font-size: 1.5em;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.start-button {
+  background-color: #28a745;
+}
+
+.start-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.high-scores-button {
+  background-color: #17a2b8;
+}
+
+.high-scores-button:hover {
+  background-color: #138496;
+  transform: scale(1.05);
+}
+
+/* Skip Nav Style */
+.skip-nav-link {
+  position: absolute;
+  transform: translateY(-250%);
+  color: #e7ecef;
+  text-decoration: none;
+  background-color: #8b8c89;
+  opacity: 0.9;
+}
+
+.skip-nav-link:focus {
+  transform: translateY(-130%);
+}
+
+/* Header */
+header {
+  position: fixed; /* Fix the header at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Span the full width */
+  height: 100px; /* Increase the height as needed */
+  background-color: #89b6e4;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px 5px; */
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 30px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+header .logo span {
+  font-size: 1.5em;
+  margin-left: 10px;
+  font-weight: lighter;
+}
+
+#header-text {
+  display: flex;
+  margin-left: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-site-name,
+.header-site-subtitle {
+  font-size: 2rem;
+  color: #274c77;
+  letter-spacing: 0.2em;
+}
+
+.header-site-subtitle {
+  font-size: 0.8rem;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #0275d8;
+  margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+  margin-left: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #dfe6e9;
+}
+
+/* Sign-In */
+.sign-in-button {
+  background-color: #e7ecef;
+  color: #274c77;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-in-button:hover {
+  background-color: #2980b9;
+  color: #e7ecef;
+}
+
+.header-icon {
+  /* margin-left: 10px; */
+  height: 40px;
+  width: auto;
+}
+
+.translate-button {
+  background-color: #89b6e4;
+  border: none;
+  border-radius: 100%;
+}
+
+.translate-button:hover #tooltip {
+  opacity: 1;
+}
+
+#tooltip {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: rgba(138, 138, 138, 0.7);
+  color: white;
+  margin-top: 15px;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  font-size: 14px;
+  border-radius: 4px;
+  top: 3.5rem;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  /* hovers only when user hovers on button, not tool tip */
+  white-space: nowrap;
+}
+
+.common-button {
+  padding: 15px 30px; /* Increase padding for a larger button */
+  font-size: 1.5em;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745; /* Color of the Start button */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.common-button:hover {
+  background-color: #218838; /* Darker shade for hover effect */
+  transform: scale(1.05);
 }

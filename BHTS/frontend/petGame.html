@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreditEdu - Your Path to Credit Knowledge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <script src="pet_game.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <a class="skip-nav-link" href="#main-content">
+            skip navigation
+        </a>
+
+        <div class="header-left">
+            <img src="assets/credit-card.png" alt="Logo" class="header-icon">
+            <div id="header-text">
+                <span class="header-site-name">credit edu</span>
+                <span class="header-site-subtitle">...we make learning credit easy</span>
+            </div>
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="importance.html">importance</a></li>
+                <li><a href="articles.html">articles</a></li>
+                <li><a href="games.html">games</a></li>
+                <li><a href="lessons.html">lessons</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <button class="sign-in-button">sign in</button>
+            <button class="translate-button">
+                <div id="tooltip">
+                    <div>English</div>
+                    <div>Español</div>
+                    <div>Français</div>
+                    <div>中国人</div>
+                    <div>日本語</div>
+                </div>
+                <img src="assets/globe.png" alt="Globe" class="header-icon" id="translateButton">
+            </button>
+        </div>
+    </header>
+
+    <h1 class="game-title">PiggyCredit Pal</h1>
+    
+    
+    <div id = "myPay" class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Payment Made! &#128079
+    </div>
+    <div id = "myPay2" class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Payment Made! &#128079
+    </div>
+
+    <main class="container">
+        <div class = "score_board">
+        <h2 id="scoreDisplay">Points: 0</h2>
+
+        <button onclick="showAlert()" id="question_btn">
+        <img  class = "question_btn" src="question.png" alt="buttonpng"/>
+        </button>
+          <div id="myAlert" class="alert-banner"></div>
+        </div>
+        <div id="scoreAlert" class="alert">
+            <span onclick="closeScoreAlert()"></span>
+            You don't have enough points &#128533;
+        </div>
+    
+        <section id="controller" class="button-wrapper">
+        <button>
+            <img id = "bored" class = "img_btn" src="beach-ball.png" alt="buttonpng"/>
+          </button>
+        <button >
+            <img id = "hungry" class ="img_btn" src="coin.png" alt="buttonpng" />
+        </button >
+        <button>
+            <img id = "sleepy" class = "img_btn" src="crescent-moon.png" alt="buttonpng"/>
+          </button>
+    </section>
+
+      <section id="game-state" class="game-state-wrapper">
+        <h2 id="hunger-message" class="hidden">
+            <span id="message-content">I'm hungry!</span>
+          </h2>
+          <h2 id="bored-message" class="hidden">
+             <span id="message-content">I'm bored!</span>
+          </h2>
+          <h2 id="sleepy-message" class="hidden">
+            <span id="message-content">I'm sleepy!</span>
+          </h2>
+        <img id="piggy" src="piggy_bank.webp" class="game-graphic" />
+        <button id="restart" class="hidden">Play Again</button>
+      </section>
+    </main>
+    <footer>
+        <p>© CreditEdu - Empowering Financial Success</p>
+    </footer>
+  </body>
+</html>
