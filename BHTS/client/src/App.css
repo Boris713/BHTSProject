@@ -194,20 +194,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  //z-index: 1000;
+  /* padding: 10px 5px; */
+  z-index: 1000;
 }
 
 .header-left {
   display: flex;
   align-items: center;
+  padding: 30px;
 }
 
 .header-right {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding-right: 10px;
+  padding-right: 30px;
 }
 
 header .logo {
