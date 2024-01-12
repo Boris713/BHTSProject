@@ -113,6 +113,7 @@ function App() {
   const [showScore, setShowScore] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [answered, setAnswered] = useState(false);
+  const [showMainScreen, setShowMainScreen] = useState(true);
 
   const selectRandomQuestions = (allQuestions, num = 10) => {
     const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
@@ -151,73 +152,136 @@ function App() {
     setQuestions(selectRandomQuestions(allQuestions)); // Reshuffle questions for a new quiz
   };
 
+  const startQuiz = () => {
+    setShowMainScreen(false);
+  };
   return (
     <div className="app">
-      {showScore ? (
-        <div className="score-section">
-          You scored {score} out of {questions.length}
-          <div style={{ marginTop: "20px" }}>
-            <button onClick={resetQuiz} className="next-question-btn">
-              Try Again
-            </button>
+      <header>
+        <div class="header-left">
+          <img src="/assets/credit-card.png" alt="Logo" class="header-icon" />
+          <div id="header-text">
+            <span class="header-site-name">credit edu</span>
+            <span class="header-site-subtitle">
+              ...we make learning credit easy
+            </span>
           </div>
         </div>
-      ) : (
-        <div className="quiz-container">
-          {questions.length > 0 && (
-            <div className="question-section">
-              <div className="question-count">
-                <span>Question {currentQuestionIndex + 1}</span>/
-                {questions.length}
-              </div>
-              <div className="question-text">
-                {questions[currentQuestionIndex].questionText}
-              </div>
-              <div className="options-container">
-                {questions[currentQuestionIndex].answerOptions.map(
-                  (answerOption, index) => (
-                    <div
-                      key={index}
-                      className={`option ${
-                        answered &&
-                        (index === selectedAnswer
-                          ? answerOption.isCorrect
-                            ? "correct"
-                            : "incorrect"
-                          : answerOption.isCorrect
-                          ? "correct"
-                          : "")
-                      }`}
-                      onClick={() =>
-                        !answered &&
-                        handleAnswerOptionClick(answerOption.isCorrect, index)
-                      }
-                    >
-                      {answerOption.answerText}
-                    </div>
-                  )
-                )}
-              </div>
-              {answered &&
-                (currentQuestionIndex < questions.length - 1 ? (
-                  <button
-                    onClick={handleNextQuestion}
-                    className="next-question-btn"
-                  >
-                    Next Question
-                  </button>
-                ) : (
-                  <button
-                    onClick={() => setShowScore(true)}
-                    className="next-question-btn"
-                  >
-                    Finish Quiz
-                  </button>
-                ))}
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">home</a>
+            </li>
+            <li>
+              <a href="importance.html">importance</a>
+            </li>
+            <li>
+              <a href="articles.html">articles</a>
+            </li>
+            <li>
+              <a href="games.html">games</a>
+            </li>
+            <li>
+              <a href="lessons.html">lessons</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <button class="sign-in-button">sign in</button>
+          <button class="translate-button">
+            <div id="tooltip">
+              <div>English</div>
+              <div>Español</div>
+              <div>Français</div>
+              <div>中国人</div>
+              <div>日本語</div>
             </div>
-          )}
+            <img
+              src="/assets/globe.png"
+              alt="Globe"
+              class="header-icon"
+              id="translateButton"
+            />
+          </button>
         </div>
-      )}
+      </header>
+      <div id="main-content">
+        {showMainScreen ? (
+          <div className="main-screen">
+            <h1 className="main-heading">Credit Quiz</h1>
+            <button onClick={startQuiz} className="common-button">
+              Start
+            </button>
+            <button className="common-button">High Scores</button>
+          </div>
+        ) : showScore ? (
+          <div className="score-section">
+            <h1 className="main-heading">
+              You scored {score} out of {questions.length}
+            </h1>
+            <div>
+              <button onClick={resetQuiz} className="common-button">
+                Try Again
+              </button>
+              <button className="common-button">High Scores</button>
+            </div>
+          </div>
+        ) : (
+          <div className="quiz-container">
+            {questions.length > 0 && (
+              <div className="question-section">
+                <div className="question-count">
+                  <span>Question {currentQuestionIndex + 1}</span>/
+                  {questions.length}
+                </div>
+                <div className="question-text">
+                  {questions[currentQuestionIndex].questionText}
+                </div>
+                <div className="options-container">
+                  {questions[currentQuestionIndex].answerOptions.map(
+                    (answerOption, index) => (
+                      <div
+                        key={index}
+                        className={`option ${
+                          answered
+                            ? answerOption.isCorrect
+                              ? "correct"
+                              : selectedAnswer === index
+                              ? "incorrect"
+                              : ""
+                            : ""
+                        }`}
+                        onClick={() =>
+                          !answered &&
+                          handleAnswerOptionClick(answerOption.isCorrect, index)
+                        }
+                      >
+                        {answerOption.answerText}
+                      </div>
+                    )
+                  )}
+                </div>
+                {answered &&
+                  (currentQuestionIndex < questions.length - 1 ? (
+                    <button
+                      onClick={handleNextQuestion}
+                      className="next-question-btn"
+                    >
+                      Next Question
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => setShowScore(true)}
+                      className="next-question-btn"
+                    >
+                      Finish Quiz
+                    </button>
+                  ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
